@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard</title>
+<style>
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    /* Dashboard styles */
+    .dashboard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .streak {
+        font-size: 24px;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    .activity-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .activity-list li {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="dashboard">
+        <div>
+            <h1>Welcome, Student!</h1>
+            <p>Here's your dashboard:</p>
+        </div>
+        <div class="streak">Streak: <span id="streakValue">0</span></div>
+    </div>
+    <h2>Daily Activities</h2>
+    <ul class="activity-list" id="activityList">
+        <!-- Activities will be added dynamically here -->
+    </ul>
+</div>
+
+<script>
+    // JavaScript for updating streak value and displaying daily activities
+    let streak = 0; // Initialize streak value
+
+    // Dummy data for daily activities
+    const activities = [
+        "Completed Math homework",
+        "Read a chapter of Science book",
+        "Practiced coding for 30 minutes",
+        "Did 20 pushups",
+        "Reviewed Spanish vocabulary"
+    ];
+
+    // Update streak value
+    function updateStreak() {
+        streak++;
+        document.getElementById("streakValue").textContent = streak;
+    }
+
+    // Display daily activities
+    function displayActivities() {
+        const activityList = document.getElementById("activityList");
+        activityList.innerHTML = ""; // Clear existing activities
+
+        activities.forEach(activity => {
+            const li = document.createElement("li");
+            li.textContent = activity;
+            activityList.appendChild(li);
+        });
+    }
+
+    // Simulate daily activities
+    function simulateDailyActivities() {
+        updateStreak();
+        displayActivities();
+    }
+
+    // Simulate daily activities on page load
+    simulateDailyActivities();
+</script>
+
+</body>
+</html>

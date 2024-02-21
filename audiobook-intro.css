@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main, .main1 {
+    background-color: #1b1b1b;
+    padding: 25px;
+}
+
+.head {
+    color: #ffffff;
+    font-family: 'Bree Serif', sans-serif;
+    font-size: 28px;
+}
+
+.img {
+    width: 100%;
+    max-width: 135px;
+    height: auto;
+}
+
+.top {
+    background-color: #e6f6ff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.head2 {
+    color: #183b56;
+    font-size: 16px;
+    font-family: 'Bree Serif', sans-serif;
+}
+
+.para1 {
+    color: #06070d;
+    font-family: 'Bree Serif', sans-serif;
+    font-size: 18px;
+}
+
+.para2 {
+    color: #9aa5b1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.data {
+    padding: 25px;
+}
+
+.bottom {
+    padding-top: 10px;
+}
+
+.head3 {
+    color: #ffffff;
+    font-family: 'Bree Serif', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.img1 {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+
+.head4 {
+    color: #ffffff;
+    font-family: 'Bree Serif', sans-serif;
+    font-size: 18px;
+}
+
+.para3, .para4 {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Bree Serif', sans-serif;
+}
+
+.img3 {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.head5, .k {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Bree Serif', sans-serif;
+}

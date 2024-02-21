@@ -1,0 +1,155 @@
+<!-- types_of_books.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Books</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           
+            background-size: cover;
+            color:rgba(51, 51, 51, 0.8);
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        nav {
+            width: 20%;
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        h2, h3 {
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+        nav a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 0 25px;
+        }
+        .naav{
+            padding:30px ;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Types of Books</h1>
+    </header>
+
+    <section>
+        <nav>
+            <a href="profile.html">Profile Building</a>
+        <a href="types_of_books.html">Types of Books</a>
+        <a href="due_date.html">Due Date</a>
+        <a href="listening_books.html">Listening Books</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="chatbox.html">Chatbox</a>
+        <a href="books_sharing.html">Books Sharing</a>
+        <a href="latest_updates.html">Latest Updates</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="rating_review.html">Rating and Review</a>
+        </nav>
+        <div>
+            <main>
+                <h2>Explore Different Types of Books</h2>
+                <p>Our library offers a diverse collection of books catering to various interests. Explore the following types of books:</p>
+    
+            
+            </main><br>
+            <div id="excelData"></div>
+        </div>
+        
+    </section>
+
+        <!-- Add this in the head section of your HTML file -->
+<!-- Add this in the head section of your HTML file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Specify the path to your Excel file
+    const excelFilePath = 'List.xlsx';
+
+    // Load the Excel file
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', excelFilePath, true);
+    xhr.responseType = 'arraybuffer';
+
+    xhr.onload = function() {
+      const arrayBuffer = xhr.response;
+      if (arrayBuffer) {
+        // Convert array buffer to binary string
+        const data = new Uint8Array(arrayBuffer);
+        const binaryData = String.fromCharCode.apply(null, data);
+
+        // Parse the Excel data
+        const workbook = XLSX.read(binaryData, { type: 'binary' });
+
+        // Get the first sheet
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+
+        // Convert sheet data to JSON
+        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+        // Process the data and display in the div
+        const excelDataDiv = document.getElementById('excelData');
+        let output = '';
+
+        jsonData.forEach((row, index) => {
+          if (index > 0) { // Skip the header row
+            const cell1 = row[0]; // Assuming cell1 is the first cell in the row
+            const cell2 = row[1];
+            const cell3 = row[2] // Assuming cell2 is the second cell in the row
+            output += `${cell1}: ${cell2}:   ${cell3}<br>`;
+          }
+        });
+
+        excelDataDiv.innerHTML = output;
+      }
+    };
+
+    xhr.send();
+  });
+</script>
+</body>
+</html>
+

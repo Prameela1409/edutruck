@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header {
+            text-align: center;
+            padding: 1em;
+            flex: 1;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #555;
+            color: #fff;
+            padding: 1em;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        section {
+            flex: 2;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            background-color: #555;
+            padding:20px;
+
+        }
+        h
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding:25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px;
+            display: block;
+            transition: background-color 0.3s;
+            padding:25px;
+        }
+
+        a:hover {
+            background-color: #333;
+        }
+
+        .wishlist-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .wishlist-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .wishlist-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="profile.html">Profile Building</a>
+        <a href="types_of_books.html">Types of Books</a>
+        <a href="due_date.html">Due Date</a>
+        <a href="listening_books.html">Listening Books</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="chatbox.html">Chatbox</a>
+        <a href="books_sharing.html">Books Sharing</a>
+        <a href="latest_updates.html">Latest Updates</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="rating_review.html">Rating and Review</a>
+    </nav>
+
+    <section>
+        <header>
+            <h2>Library App</h2>
+        </header>
+
+        <div class="wishlist-section">
+            <h2>Your Wishlist</h2>
+
+            <div class="wishlist-item">
+              <h1> <strong>Title:</strong> "The Great Gatsby"</h1> 
+                <br>
+            <h1>   <strong>Author:</strong> F. Scott Fitzgerald</h1> 
+                <br>
+            <h1>  <strong>Genre:</strong> Classic</h1> 
+                <br>
+                <button onclick="removeFromWishlist()">Remove from Wishlist</button>
+            </div>
+
+            <!-- Add more wishlist items as needed -->
+
+        </div>
+    </section>
+
+    <script>
+        function removeFromWishlist() {
+            // Add logic to remove the book from the wishlist
+            alert("Book removed from wishlist!");
+        }
+    </script>
+</body>
+</html>

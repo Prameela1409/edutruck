@@ -1,0 +1,63 @@
+.explore-knowledge {
+    background-color: white;
+}
+
+.head {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 28px;
+    color: #183b56;
+}
+
+.image {
+    border-radius: 16px;
+}
+
+.img-head {
+    font-family: Roboto;
+    font-size: 20px;
+    margin-top: 24px;
+    font-weight: 500;
+    color: #323f4b;
+}
+
+.menu-link {
+    color: #183b56;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu-item-card {
+    border-radius: 16px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question h2 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+    color: #183b56;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #183b56;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0c2c43;
+}
